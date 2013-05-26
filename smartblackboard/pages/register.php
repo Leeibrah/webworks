@@ -1,0 +1,336 @@
+<?php
+include_once "dbConnect.php";
+
+if(isset($_POST['name']))
+{
+     echo "<h2>Validation Success!</h2>";
+    $con = connect();
+    if($con)
+    {
+		$sql="INSERT INTO `teacher_details`(`id_number`,name,`cert_number`,phonenumber,email,institution,location,tally) VALUES('{$_POST['nationalId']}','{$_POST['name']}','{$_POST['certId']}','{$_POST['phone']}','{$_POST['email']}','{$_POST['institution']}','{$_POST['location']}','0')";
+		$result=mysql_query($sql) or die(mysql_error());
+	}
+	else
+	{
+		print myslq_error();
+	} 
+
+}
+   
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"  />
+<title>Smart Black Board</title>
+<meta name="generator" content="WordPress 3.3.1" />
+<meta name="robots" content="follow, all" />
+<link rel="shortcut icon" href="http://www.africastalking.com/wp-content/uploads/2012/02/africas-talking-favicon.jpg"/>
+<link rel="stylesheet" href="wp-content/themes/epsilon/style.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="Africa&#039;s Talking RSS Feed" href="feed/feed.xml" />
+<link rel="pingback" href="xmlrpc.php" />
+<link rel="alternate" type="application/rss+xml" title="Africa&#039;s Talking &raquo; Feed" href="feed/feed.xml" />
+<link rel="alternate" type="application/rss+xml" title="Africa&#039;s Talking &raquo; Comments Feed" href="http://www.africastalking.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Africa&#039;s Talking &raquo; Africa&#8217;s Talking joins Hub Ventures! Comments Feed" href="africas-talking-joins-hub-ventures/feed/feed.xml" />
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='wp-content/themes/epsilon/js/jquery.bxSlider.min.js'></script>
+<script type='text/javascript' src='wp-content/themes/epsilon/js/jquery.cycle.all.js'></script>
+<script type='text/javascript' src='wp-content/themes/epsilon/js/jquery.prettyPhoto.js'></script>
+<script type='text/javascript' src='wp-content/themes/epsilon/js/jquery.colorbox.js'></script>
+<script type='text/javascript' src='wp-content/themes/epsilon/js/ddaccordion.js'></script>
+<script type='text/javascript' src='wp-content/themes/epsilon/js/jquery.equalheights.js'></script>
+<script type='text/javascript' src='wp-content/themes/epsilon/js/jquery.corner.js'></script>
+<script type='text/javascript' src='wp-content/themes/epsilon/js/jquery.tools.tabs.min.js'></script>
+<script type='text/javascript' src='wp-content/themes/epsilon/js/functions.js'></script>
+<script type="text/javascript" src="validate.js"></script>
+<script type="text/javascript" src="formvalidator.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.xml" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='SMSLeopard launched at the iHub' href='smsleopard-launched-at-the-ihub.html' />
+<link rel='next' title='Africa&#8217;s Talking releases test API' href='africas-talking-releases-test-api.html' />
+<meta name="generator" content="WordPress 3.3.1" />
+<link rel='canonical' href='africas-talking-joins-hub-ventures.html' />
+<link rel='shortlink' href='http://www.africastalking.com/?p=542' />
+	<link rel="stylesheet" href="wp-content/themes/epsilon/css/prettyPhoto.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="wp-content/themes/epsilon/css/colorbox.css" type="text/css" media="screen" />
+	  <link rel="stylesheet" href="wp-content/themes/epsilon/css/custom_style.css" type="text/css" media="screen" />
+  	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+	
+
+<!-- ////////////////////////////////// -->
+<!-- //      Javascript Files        // -->
+<!-- ////////////////////////////////// -->
+<script type="text/javascript" src="wp-content/themes/epsilon/js/cufon-yui.js"></script>
+<script type="text/javascript" src="wp-content/themes/epsilon/js/fonts/franklein.cufonfonts.js"></script>
+<script type="text/javascript">
+    Cufon.set('fontWeight','normal').replace('h1') ('h2') ('h3') ('h4') ('h5') ('h6')('.pp_content .signup-content h2') ('.boldtext-medium') ('.boldtext-strong') ('.pullquote_left') ('.pullquote_right')('.boxtitle-hosting',{ignoreClass :'.currency'}) 
+	('#menu li a', { 
+		hover: true,
+		textShadow: '0px 1px 0px #ededed'
+	 })
+ 	('.button') ('.button2') ('.button-red')('.button-blue')('.submit-popup', { 
+		hover: true,
+		textShadow: '0px 1px 0px #ededed'
+	 })
+	;
+</script>
+<script type="text/javascript"> 
+   
+  
+  jQuery(document).ready(function($) {
+    
+    var numImgs = $('#slideshow').find(".header-image img").length;
+    if (numImgs > 0) {
+			$('#slideshow').bxSlider({
+        speed: 500,
+        pause: 5000,       
+        auto: true,
+        pager: true,
+        controls: true,
+        infiniteLoop: false,
+        mode: 'horizontal',
+        hideControlOnEnd : false			});
+    }
+	});
+</script>   
+<!--[if lte IE 7]>  
+	<link href="http://www.africastalking.com/wp-content/themes/epsilon/css/ie6.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://www.africastalking.com/wp-content/themes/epsilon/js/DD_belatedPNG.js"></script>
+	<script type="text/javascript"> 
+	   DD_belatedPNG.fix('img, .vertical-separator, #nav-slide, #pager a, .activeSlide'); 
+	</script>    
+<![endif]-->
+<!--[if IE 7]>    
+	<style type="text/css">
+    .img-tour{width:106px; height:107px;}
+    .ie7line{height:285px;}
+    .popup-form{margin-left:25px;}
+    .popup{margin-left:24px;}
+	.submit-popup{margin-left:110px;}
+	.textarea-popup{margin-left:25px;}
+    </style>
+<![endif]-->
+<!--[if IE 8]>    
+	<style type="text/css">
+    .nav-testimonial{width:15%;height:21px;top:68px;left:210px;position:absolute;}
+    .next{position:absolute;top:10px;left:22px;}
+    .prev{position:absolute;top:10px;}
+    </style>
+<![endif]-->
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<!-- begin of container 960px center -->
+  <div id="container">
+    
+    	<!-- begin of topnavigation -->
+    	<div id="topnavigation">
+        	<span class="toplink" style="visibility:hidden; display:none"><a href="africas-talking-joins-hub-ventures.html#" class="signup-form">Sign up</a>|
+          <a href="africas-talking-joins-hub-ventures.html#" class="login-form">Login</a>            
+          </span>
+        </div>
+        <!-- end of topnavigation -->
+        
+    	<div id="main-curve-top"></div>
+    	<!-- begin of main -->
+    	<div id="main">
+        
+            <!-- begin of top -->
+            <div id="top">
+                <div id="logo">
+                                    <a href="#"><img src="../images/smart_logo.png" alt="Africa&#039;s Talking" /></a>								                  
+              </div>
+                
+                <div id="topright">
+                	<span class="boldtext-medium">Quick Contact</span><br />
+                                        <span class="boldtext-strong">+254-734621636</span>
+                </div>
+            </div>
+            <!-- end of top -->
+            
+            <!-- BEGIN OF MAINMENU -->
+            <div id="mainmenu">
+              <div id="link_menu">
+                <li><a href="../index.html" style="color:#ffffff; font-weight: bold;">Home</a></li></div><div id="link_menu">
+              <li><a href="about.html" style="color:#ffffff; font-weight: bold;">About Us</a>
+              
+              </li></div><div id="link_menu">
+              <li><a href="#" style="color:#ffffff; font-weight: bold;">Register</a>            
+
+              </li></div><div id="link_menu">
+              <li class="page_item page-item-51 current_page_item"><a href="contact.html" style="color:#ffffff; font-weight: bold;">Contact</a></li></div>
+              
+            </div>
+            <!-- END OF MAINMENU -->
+            
+        
+            <!-- BEGIN OF PAGE TITLE --><!-- END OF PAGE TITLE -->
+            
+            <!-- BEGIN OF CONTENT -->
+<div id="content-inner-sidebar">
+                	 <!-- begin of col-620  -->
+                	<div class="col-620">
+                    	<div id="maintext">
+                      	<center>
+<h2><?phpif(isset($successMessage){echo $successMessage;echo "successMessage";}?></h2>
+    <div id="formdiv">
+        <fieldset>
+            <form id="formLogin" style="min-height:200px;" method="POST" action="register.php" onsubmit= "return validator();">
+               
+                
+                <table>
+                	<tr>
+                        <td>NationalID</td>
+                        <td><input type="text" value="" name="nationalId"/></td>
+                    </tr>		
+
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" value="" name="name"/></td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>TSC Number</td>
+                        <td><input type="text" value="" name="certId"/></td>
+                       </tr>
+                       <tr>
+                        <td>PHONE NO</td>
+                        <td><input type="text" value="" name="phone"/></td>
+                    </tr>
+                   
+                        
+
+                    
+                    <tr>
+                    	<td>Email</td>
+                    	<td><input type="text"value="" name="email" /></td>
+                    </tr>
+                    
+                    <tr>
+                    	<td>Institution</td>
+                    	<td><input type="text" value="" name="institution" /></td>
+                    </tr>
+                    <tr>
+                    	<td>Location</td>
+                    	<td><input type="text" value="" name="location" /></td>
+                    </tr>
+                    </table>
+
+      
+                
+                <input type="submit" value="Register" /><input type="reset" value="Cancel" />
+
+            </form>
+        </fieldset>
+
+    </div>
+</center><!-- end of post -->                    	
+
+                      </div><!-- end of maintext -->
+                    </div>
+                    <!-- end of col-620 -->
+                    
+                                                        <!-- BEGIN OF SIDEBAR --><!-- END OF SIDEBAR -->                    
+              <div class="clear"></div>
+            </div>
+            <div id="content-inner-sidebar-bottom"></div>
+            <!-- END OF CONTENT -->
+        </div>
+        <!-- end of main -->
+        
+        <div id="main-curve-bottom"></div>
+        
+    	<!-- BEGIN OF FOOTER -->
+    	<div id="footer">
+        	<div id="footer-col">
+            	 <!-- begin of col-920 (footer column) -->
+                  <div class="col-920">
+                    <div class="vertical-separator equal"></div>
+                    <div class="vertical-separator equal"></div>
+                    <div class="vertical-separator equal"></div>
+                    <div class="col-284 equal">
+                                                                                              <ul class="socialicon">
+                                       
+                        	<li><img src="../images/icon-fb.gif" alt="" />&nbsp;&nbsp;<a href="http://facebook.com/">Become a fan on Facebook</a></li>
+                          <li><img src="../images/icon-twitter.gif" alt=""/>&nbsp;&nbsp;<a href="http://twitter.com/">Follow us on Twitter</a></li>
+                         
+                    </ul>                                          </div>
+                  	<div class="clear"></div>
+                  </div>
+                 <!-- end of col-920 (footer column) -->
+            </div>
+            <div id="footer-text">
+                        Copyright SmartBlackboard Ltd 2012. All Rights Reserved            </div>
+        </div>
+        <!-- END OF FOOTER -->
+        
+    </div>
+    <!-- end of container 960px center -->
+        
+    <!-- begin sign up and login popup -->
+    <div style='display:none'>
+        <div id='signup-content' style='padding:20px; background:#fff;'>
+        <h2>Africa&#039;s Talking sign up form</h2>
+        <hr class="double-form" />                        
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non</p>        
+        <form action="africas-talking-joins-hub-ventures.html" method="post" class="popup-form">
+            <fieldset>
+            <label class="popup">Name</label>
+            <input class="input"  type="text" size="25" />
+            <label class="popup">Email</label>
+            <input class="input" type="text" size="25" />
+            <label class="popup">Address</label>
+            <textarea cols="40" rows="5" class="textarea-popup"></textarea>
+            <label class="popup">City</label>
+            <input class="input"  type="text" size="25" />
+            <label class="popup">Country</label>
+            <input class="input"  type="text" size="25" />
+            <label class="popup">Zip Postal</label>
+            <input class="input"  type="text" size="25" />            
+            <button type="submit" class="submit submit-popup">Submit</button>            
+            </fieldset>
+        </form>             
+        </div>
+        
+        <div id='login-content' style='padding:20px; background:#fff;'>
+        <h2>Africa&#039;s Talkinglogin form</h2>
+        <hr class="double-form" />                        
+        <form action="wp-login.htm" method="post" class="popup-form">
+            <fieldset>
+            <label class="popup">Username</label>
+            <input class="input" name="log" id="log"  type="text" size="25" />
+            <label class="popup">Password</label>
+            <input class="input" type="password" size="25" name="pwd" id="pwd" />
+            <input type="hidden" name="redirect_to" value="http://www.africastalking.com"/>            
+            <button type="submit" class="submit submit-popup">Submit</button>            
+            </fieldset>
+        </form>                     
+        </div>
+    </div>
+    <!-- end of sign up and login popup -->    
+    <script type="text/javascript"> Cufon.now(); </script>
+    <!-- ClickDesk - <a href='http://www.clickdesk.com'> Live Chat Service </a> for websites --> <script type='text/javascript'> var _glc =_glc || []; _glc.push('ag9jb250YWN0dXN3aWRnZXRyEAsSB3dpZGdldHMYs9y3Agw'); var glcpath = (('https:' == document.location.protocol) ? 'https://contactuswidget.appspot.com/livily/browser/' : 'http://gae.clickdesk.com/livily/browser/'); var glcp = (('https:' == document.location.protocol) ? 'https://' : 'http://'); var glcspt = document.createElement('script'); glcspt.type = 'text/javascript'; glcspt.async = true;glcspt.src = glcpath + 'livechat.js'; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(glcspt, s); </script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29471907-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!--
+Skype 'My status' button
+http://www.skype.com/go/skypebuttons
+-->
+<script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
+</body>
+</html>

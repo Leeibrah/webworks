@@ -1,0 +1,80 @@
+package com.wglxy.example.dash1;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+
+public class Login extends DashboardActivity implements OnClickListener
+{
+	public Button enter,cancel;
+	public EditText Edittextusername,Edittextpassword;
+	private String username,password;
+	private CheckBox saveLoginCheckBox;
+	private SharedPreferences loginPreferences;
+	private SharedPreferences.Editor loginPrefsEditor;
+    private Boolean saveLogin;
+	 
+
+protected void onCreate(Bundle savedInstanceState) 
+{
+    super.onCreate(savedInstanceState);
+    setContentView (R.layout.login);
+   
+    Edittextusername=(EditText)findViewById(R.id.fullname);
+    Edittextpassword=(EditText)findViewById(R.id.password);
+    saveLoginCheckBox = (CheckBox)findViewById(R.id.saveLoginCheckBox);
+    loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
+    loginPrefsEditor = loginPreferences.edit();
+    saveLogin = loginPreferences.getBoolean("saveLogin", false);
+    if (saveLogin == true) {
+        Edittextusername.setText(loginPreferences.getString("username", ""));
+        Edittextpassword.setText(loginPreferences.getString("password", ""));
+        saveLoginCheckBox.setChecked(true);
+    }
+    enter=(Button)findViewById(R.id.login);
+    enter.setOnClickListener(new OnClickListener(){
+    	
+		public void onClick(View view) {
+			 if (view == enter) {
+		            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+		            imm.hideSoftInputFromWindow(Edittextusername.getWindowToken(), 0);
+		            username = Edittextusername.getText().toString();
+		            password = Edittextpassword.getText().toString();
+		            if (saveLoginCheckBox.isChecked()) {
+		                loginPrefsEditor.putBoolean("saveLogin", true);
+		                loginPrefsEditor.putString("username", username);
+		                loginPrefsEditor.putString("password", password);
+		                loginPrefsEditor.commit();
+		            } else {
+		                loginPrefsEditor.clear();
+		                loginPrefsEditor.commit();
+		            }
+
+		            doSomethingElse();
+		        }
+		    }
+			
+             public void doSomethingElse() {
+			Intent i = new Intent(getApplicationContext(),HomeActivity.class);
+            startActivity(i);
+}
+    	
+    	
+    	
+    });
+}
+
+
+public void onClick(View arg0) {
+	// TODO Auto-generated method stub
+	
+}
+}
+    
+   

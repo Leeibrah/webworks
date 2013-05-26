@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrapper{
+	margin:auto;
+	width:100%;
+	height:inherit;
+}
+
+/* Head starts here */
+#head{
+	width:100%;
+	height:204px;
+	float:left;
+	background-color:#979392;
+}
+
+#logo{
+	background-image:url(../images/robiani_logo.png);
+	width:428px;
+	height:155px;
+	margin-left:33%;
+	margin-top:25px;
+	float:left;
+}
+
+/* Body starts here */
+#body{
+	width:100%;
+	height:400px;
+	margin-left:20%;
+	float:left;
+	background-color:#FFF;
+}
+
+#bg_img{
+	background-image:url(../images/body_bg_image.png);
+	float:left;
+	width:100%;
+	height:396px;
+	background-repeat:no-repeat;
+}
+
+#link_bar{
+	width:800px;
+	height:43px;
+	float:left;
+	margin-top:3px;
+}
+#first_link_bg{
+	width:234px;
+	height:43px;
+	float:left;
+	margin-left:155px;
+	margin-top:2px;
+	background-color:#000;
+}
+
+#second_link_bg{
+	width:234px;
+	height:43px;
+	float:left;
+	margin-left:2px;
+	margin-top:2px;
+	background-color:#000;
+}
+
+#third_link_bg{
+	width:234px;
+	height:43px;
+	float:left;
+	margin-left:155px;
+	margin-top:2px;
+	background-color:#000;
+}
+
+#fourth_link_bg{
+	width:234px;
+	height:43px;
+	float:left;
+	margin-left:2px;
+	margin-top:2px;
+	background-color:#000;
+}
+
+/* Footer starts here */
+#footer{
+	width:800px;
+	height:10px;
+	float:left;
+}

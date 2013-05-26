@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#wrapper{
+	margin:auto;
+	width:100%;
+	height:inherit;
+}
+
+/* Head starts here */
+#head{
+	width:100%;
+	height:71px;
+	float:left;
+	background-color:#979392;
+}
+
+#logo{
+	background-image:url(../images/small_logo.png);
+	width:173px;
+	height:71px;
+	float:left;
+	background-repeat:no-repeat;
+	margin-left:10%;
+}
+
+#links_space{
+	float:left;
+	margin-left:30%;
+	width:410px;
+	height:71px;
+}
+
+#homelink{
+	width:80px;
+	height:71px;
+	float:left;
+	background-color:#666;
+}
+
+#aboutlink{width:80px;
+	height:71px;
+	float:left;
+	background-color:#666;}
+
+#productslink{width:80px;
+	height:71px;
+	float:left;
+	background-color:#666;}
+
+#gallerylink{width:80px;
+	height:71px;
+	float:left;
+	background-color:#666;}
+
+#contactlink{width:80px;
+	height:71px;
+	float:left;
+	background-color:#666;}
+
+#header_space{
+	float:left;
+	width:80%;
+	height:47px;
+	margin:auto;
+	}
+#body{
+	width:975px;
+	height:560px;
+	margin-left:10%;
+	float:left;
+	background-color:#CCC;
+}
+
+#content_space{
+	width:80%;
+	height:600px;
+	float:left;
+	margin:auto;
+	background-color:#FFF;
+}
+
+#right_side{
+	width:170px;
+	height:109px;
+	float:left;
+	background-image:url(../images/downloadapp.png);
+	background-repeat:no-repeat;	
+}
+
+#footer{
+	background-image:url(../images/footer_img.png)(../images/footer_img.png);
+	background-repeat:repeat;
+	float:left;
+	background-color:#006;
+	height:35px;
+	
+}

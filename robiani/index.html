@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Robiani Application</title>
+<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+        <link rel="stylesheet" href="css/first.css" />
+        <style>
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js">
+        </script>
+        
+        <script>
+        $(function() {
+ 
+            $("#beads").click(function() {
+
+		     $.ajax({
+		      type: "GET",
+		      url: "http://localhost/robiani/beads.html",
+		      data: ({event: $(this).attr('value')}),	
+		      success: onSuccess
+		    });
+
+            }); 
+            function onSuccess(data)
+            {
+                $("#resultLog").html("Command Sent: " + data);
+            }
+        });
+		
+		<!-- Earring buttons 
+		$(function(){
+			$("#earrings").click(
+				function(){
+				<!--	url: "http://localhost/robiani/beads.html" 
+				<!--	alert("Button clicked"); 
+				});
+		});
+			
+        </script>
+</head>
+
+<body>
+<div data-role="page" id="page1">
+            <div data-theme="b" data-role="header" data-position="fixed">
+                <h3>Robiani</h3>
+            </div>
+            <div id="logo_image">
+            	<img src="images/robiani_logo_main.png" width="12%" alt="robiani_logo ">
+            </div>
+            <div data-role="content" style="padding: 15px">
+            <ul data-role="listview" class="mainmenu">
+        <a href="curios.php" id="beads" class="appbutton" data-role="button" data-ajax="false" data-transition="fade" data-theme="e" value="beads" data-icon="arrow-r" data-iconpos="right" name="beads" style="text-align:left">
+                    Curios
+                </a>
+        <a href="sculptures.php" id="test1" class="appbutton" data-role="button" data-ajax="false" data-transition="fade" data-theme="e" value="necklaces" data-icon="arrow-r" data-iconpos="right"name="necklaces" style="text-align:left">
+                    Sculptures
+                </a>
+        <a href="handwork.php" id="test1" class="appbutton" data-role="button" data-ajax="false" data-transition="fade" data-theme="e" value="handbands" data-icon="arrow-r" data-iconpos="right" name="bands" style="text-align:left">
+                    Handwork
+                </a>
+        <a href="woodwork.php" id="earrings" class="appbutton" data-role="button" data-ajax="false" data-transition="fade" data-theme="e" value="earrings" data-icon="arrow-r" data-iconpos="right" name="earrings" style="text-align:left">
+                    Woodwork
+                </a>
+                <a href="art.php" id="earrings" class="appbutton" data-role="button" data-ajax="false" data-transition="fade" data-theme="e" value="earrings" data-icon="arrow-r" data-iconpos="right" name="earrings" style="text-align:left">
+                    Art
+                </a>
+                </ul>
+		<div id="resultLog"></div>
+            </div>
+            <div>
+            <!-- PARAGRAPH 2 -->
+                <span class="title"><br>
+                </span>
+                
+                <br>
+                                
+                <br>
+                <hr class="page-splits">
+                <br>
+      <div data-role="navbar" class="nav-glyphish-example">
+	                	<ul>
+                            <li><a href="#" rel="external" id="home" data-icon="custom" data-iconpos="top" data-theme="c"><small>Home</small></a></li>
+                            <li><a href="about.php" rel="external" id="news" data-icon="custom" data-iconpos="top" data-theme="c"><small>About</small></a></li>
+                            <li><a href="map.php" rel="external" id="maps" data-icon="custom" data-iconpos="top" data-theme="c"><small>Map</small></a></li>
+                            <li><a href="contacts.php" rel="external" id="contacts" data-icon="custom" data-iconpos="top" data-theme="c"><small>Contacts</small></a></li>
+                      </ul>
+                    </div>
+                 <br>
+                <hr class="page-splits">
+                <br>
+                
+        <div id="main-footer">
+           		<div data-role="footer">
+	                <h4>&copy;2012 &bull; Robiani Solutions</h4><br>
+                </div>
+             </div>
+           <!-- BOTTOM LINK -->
+                
+                
+                
+                <br><br><br><br>
+
+            </div>
+</div>
+</body>
+</html>
